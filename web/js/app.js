@@ -23,9 +23,13 @@ var infowindow = new google.maps.InfoWindow();
 var coordenates;
 var insertValues;
 var loading;
-var center = new google.maps.LatLng(41.641184, -0.894032);
+var center = new google.maps.LatLng(41.641184, -0.894032); // Default center ZARAGOZA
 var linePath;
 var busLines;
+var latlng_pos=[];
+
+//
+var debug_mode = true;
 
 function removeMarkers() {
 	while(markers.length > 0) {
@@ -34,6 +38,7 @@ function removeMarkers() {
 }
 
 function addMarker(lat, lon, title, subtitle, cat, id) {
+	console.log('adding marker');
 	var marker = new google.maps.Marker({
 		position: new google.maps.LatLng(lat, lon),
 		map: map,
@@ -57,6 +62,7 @@ function addMarker(lat, lon, title, subtitle, cat, id) {
 	});
 	markers.push(marker);
 }
+
 $('.loading').live('pageshow',function(event, ui){
 	if(loading){
 		$.mobile.loading('show', {
@@ -65,44 +71,67 @@ $('.loading').live('pageshow',function(event, ui){
 		});
 	}
 });
+
 $('#map-page').live('pageshow',function(event, ui){
 	var currentCenter = map.getCenter();
 	google.maps.event.trigger(map, "resize");
 	map.setCenter(currentCenter);
 });
+
+//
 function showMap(cat) {
 	loading = true;
+	
+
 	removeMarkers();
 	if(cat == "bus"){
 		$('#line_selector').show();
 	}else{
 		$('#line_selector').hide();
 	}
-	$.getJSON('http://api.dndzgz.com/services/'+ cat +'?callback=?', function(data) {
-			map.setZoom(15);
-			var locations = data.locations
-			var n = locations.length;
-			for(i=0; i<n; i++) {
-				var place = locations[i];
-				var lat = place['lat'];
-				var lon = place['lon'];
-				var title = place['title'];
-				var subtitle = place['subtitle'];
-				var id = place['id'];
-				addMarker(lat, lon, title, subtitle, cat, id);
+
+	if(debug_mode) {
+		api_url = "debug/pharmacies.json";
+	} else {
+		api_url = 'http://api.dndzgz.com/services/'+ cat +'?callback=?';
+	}
+	console.log(api_url);
+
+	var jqxhr = $.getJSON( api_url, function(data) {
+  		//console.log(data);
+	})
+  	.done(function(data) {
+  		map.setZoom(15);
+		var locations = data.locations
+		var n = locations.length;
+		for(i=0; i<n; i++) {
+			var place = locations[i];
+			var lat = place['lat'];
+			var lon = place['lon'];
+			var title = place['title'];
+			var subtitle = place['subtitle'];
+			var id = place['id'];
+			addMarker(lat, lon, title, subtitle, cat, id);
+		}
+		if(cat == "bus"){
+			busLines = data.lines;
+			for(var index in busLines){
+				var line = busLines[index];
+				$('#bus_lines').append('<li><a href="#" data-rel="dialog" onclick="showBusLine(\'' + index + '\');">'+line.name+'</a></li>');
 			}
-			if(cat == "bus"){
-				busLines = data.lines;
-				for(var index in busLines){
-					var line = busLines[index];
-					$('#bus_lines').append('<li><a href="#" data-rel="dialog" onclick="showBusLine(\'' + index + '\');">'+line.name+'</a></li>');
-				}
-				
-				$('#bus_lines').listview('refresh');
-			}
-			$.mobile.loading('hide');
-			loading = false;
-	});
+			$('#bus_lines').listview('refresh');
+		}
+
+		
+
+  	})
+  	.fail(function() {
+    	console.log( "error" );
+  	})
+  	.always(function() {
+    	$.mobile.loading('hide');
+		loading = false;
+  	});
 }
 
 function showBusLine(index){
@@ -147,9 +176,11 @@ function showDetail(id, cat) {
 		loading = false;
 	});
 }
+
 function changeMapName(name){
 	$('.service-type').text(name);
 }
+
 function geolocalize(first){
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position) {
@@ -185,6 +216,8 @@ function initMap() {
 	};
 	map = new google.maps.Map(document.getElementById("map-container"), myOptions);
 
+	
+	
 	google.maps.event.addListener(map, 'zoom_changed', function() {
 		if(map.getZoom() < 15){
 			var n = markers.length;
@@ -203,5 +236,10 @@ function initMap() {
   	});
 
 	geolocalize(true);
+
+
+
 }
+
+
 initMap();
