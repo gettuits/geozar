@@ -38,7 +38,6 @@ function removeMarkers() {
 }
 
 function addMarker(lat, lon, title, subtitle, cat, id) {
-	console.log('adding marker');
 	var marker = new google.maps.Marker({
 		position: new google.maps.LatLng(lat, lon),
 		map: map,
@@ -104,6 +103,7 @@ function showMap(cat) {
   		map.setZoom(15);
 		var locations = data.locations
 		var n = locations.length;
+		alert('Número: ' + n);
 		for(i=0; i<n; i++) {
 			var place = locations[i];
 			var lat = place['lat'];
