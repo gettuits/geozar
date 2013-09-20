@@ -122,7 +122,7 @@ function showMap(cat) {
 			$('#bus_lines').listview('refresh');
 		}
 
-		
+
 
   	})
   	.fail(function() {
@@ -217,7 +217,7 @@ function initMap() {
 	map = new google.maps.Map(document.getElementById("map-container"), myOptions);
 
 	
-	
+
 	google.maps.event.addListener(map, 'zoom_changed', function() {
 		if(map.getZoom() < 15){
 			var n = markers.length;
@@ -235,7 +235,7 @@ function initMap() {
     
   	});
 
-	geolocalize(true);
+	//geolocalize(true);
 
 
 
