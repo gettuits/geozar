@@ -91,7 +91,7 @@ function showMap(cat) {
 
 	if(debug_mode) {
 		if(jQuery.browser.mobile){
-			api_url = "file:///android_asset/www/data/pharmacies.json";
+			api_url = "data/pharmacies.json";
 		}else{
 			api_url = "/www/data/pharmacies.json";
 		}
