@@ -95,6 +95,7 @@ function showMap(cat) {
 		api_url = 'http://api.dndzgz.com/services/'+ cat +'?callback=?';
 	}
 	console.log(api_url);
+	alert(api_url);
 
 	var jqxhr = $.getJSON( api_url, function(data) {
   		//console.log(data);
@@ -103,7 +104,8 @@ function showMap(cat) {
   		map.setZoom(15);
 		var locations = data.locations
 		var n = locations.length;
-		alert('Número: ' + n);
+		
+
 		for(i=0; i<n; i++) {
 			var place = locations[i];
 			var lat = place['lat'];
@@ -125,8 +127,9 @@ function showMap(cat) {
 
 
   	})
-  	.fail(function() {
-    	console.log( "error" );
+  	 .fail(function( jqxhr, textStatus, error ) {
+    	var err = textStatus + ", " + error;
+    	alert( "Request Failed: " + err );
   	})
   	.always(function() {
     	$.mobile.loading('hide');
