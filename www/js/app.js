@@ -90,7 +90,7 @@ function showMap(cat) {
 	}
 
 	if(debug_mode) {
-		api_url = "/debug/pharmacies.json";
+		api_url = "file:///android_asset/www/debug/pharmacies.json";
 	} else {
 		api_url = 'http://api.dndzgz.com/services/'+ cat +'?callback=?';
 	}
