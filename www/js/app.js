@@ -93,7 +93,7 @@ function showMap(cat) {
 		if(jQuery.browser.mobile){
 			api_url = "debug/pharmacies.json";
 		}else{
-			api_url = "/www/debug/pharmacies.json";
+			api_url = "/www/data/pharmacies.json";
 		}
 	} else {
 		api_url = 'http://api.dndzgz.com/services/'+ cat +'?callback=?';
