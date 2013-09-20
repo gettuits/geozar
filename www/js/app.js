@@ -277,6 +277,7 @@ function sniffDevice(){
 //
 //sniffDevice();
 var loc = window.location.pathname;
+alert(loc);
 
 // Main
 initMap();
