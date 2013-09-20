@@ -258,6 +258,12 @@ function sniffDevice(){
 	alert(deviceInfo);
 
 	var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
+	var isWindowsPhone = /windows phone/i.test(navigator.userAgent.toLowerCase());
+	var isBlackBerry = /blackberry/i.test(navigator.userAgent.toLowerCase());
+	var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+	var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
+	var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
+
 	console.log(isAndroid);
 	alert('Dispositivo android? '+isAndroid);
 	if(jQuery.browser.mobile){
@@ -269,7 +275,7 @@ function sniffDevice(){
 }
 
 //
-sniffDevice();
+//sniffDevice();
 
 // Main
 initMap();
