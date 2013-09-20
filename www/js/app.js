@@ -38,28 +38,34 @@ function removeMarkers() {
 }
 
 function addMarker(lat, lon, title, subtitle, cat, id) {
-	var marker = new google.maps.Marker({
-		position: new google.maps.LatLng(lat, lon),
-		map: map,
-		title: title,
-		icon: '/cache/markers/marker-'+cat+'.png'
-	});
-	google.maps.event.addListener(marker, 'click', function() {
-		var content = '<strong>' + title + '</strong>';
-		if (subtitle){
-			content += '<br/><br/>'+ subtitle;
-		}
-		if(cat == "bus" || cat == "bizi"){
-			var onclick = "showDetail("+id+", '"+ cat +"')";
-			content += ' <a href="#detail" data-icon="info" onclick="'+onclick+'">Ver</a>';
-		}
-		if(cat == "tram"){
-			content += ' <a href="#complaint-page" data-icon="info">Ver</a>';
-		}
-		infowindow.setContent(content);
-		infowindow.open(map, marker);
-	});
-	markers.push(marker);
+
+	try{
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(lat, lon),
+			map: map,
+			title: title,
+			icon: '/cache/markers/marker-'+cat+'.png'
+		});
+		google.maps.event.addListener(marker, 'click', function() {
+			var content = '<strong>' + title + '</strong>';
+			if (subtitle){
+				content += '<br/><br/>'+ subtitle;
+			}
+			if(cat == "bus" || cat == "bizi"){
+				var onclick = "showDetail("+id+", '"+ cat +"')";
+				content += ' <a href="#detail" data-icon="info" onclick="'+onclick+'">Ver</a>';
+			}
+			if(cat == "tram"){
+				content += ' <a href="#complaint-page" data-icon="info">Ver</a>';
+			}
+			infowindow.setContent(content);
+			infowindow.open(map, marker);
+		});
+		markers.push(marker);
+	}
+	catch(error){
+		alert(error)
+	}
 }
 
 $('.loading').live('pageshow',function(event, ui){
@@ -101,8 +107,7 @@ function showMap(cat) {
 	console.log(api_url);
 
 	var jqxhr = $.getJSON( api_url, function(data) {
-  		console.log(data.locations.length);
-  		alert(data.locations.length);
+  		console.log('locations: ' + data.locations.length);
 	})
   	.done(function(data) {
   		map.setZoom(15);
@@ -128,7 +133,7 @@ function showMap(cat) {
 			$('#bus_lines').listview('refresh');
 		}
 
-
+		alert('Todo cargado');
 
   	})
   	 .fail(function( jqxhr, textStatus, error ) {
