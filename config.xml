@@ -24,6 +24,6 @@
     <preference name="fullscreen" value="false" />
 
     <access origin="*" /> 
-
+    <access origin="https://maps.googleapis.com" />
 
 </widget>
