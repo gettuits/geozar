@@ -43,8 +43,8 @@ function addMarker(lat, lon, title, subtitle, cat, id) {
 		var marker = new google.maps.Marker({
 			position: new google.maps.LatLng(lat, lon),
 			map: map,
-			title: title,
-			icon: '/cache/markers/marker-'+cat+'.png'
+			title: title
+			//icon: '/cache/markers/marker-'+cat+'.png'
 		});
 		google.maps.event.addListener(marker, 'click', function() {
 			var content = '<strong>' + title + '</strong>';
