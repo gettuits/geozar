@@ -55,11 +55,13 @@
 			</div>
 			</div>
 		</div>
+
 		<div data-role="page" id="map-page" class="loading">
 			<div data-role="header">
 				<h1><span class="service-type">Mapa</span></h1>
 				<a href="app#home" data-icon="home" data-direction="reverse">Inicio</a>
-				<a href="app#" data-icon="gear" onclick="geolocalize();" title="Localizar">Yo</a>
+				<a href="app#" data-icon="search" onclick="geolocalize();" title="Localizar">¿Donde estoy?</a>
+				
 			</div><!-- /header -->
 			<div data-role="content" style="padding:0">
 				<div id="wrapper">
@@ -67,8 +69,11 @@
 				<div id="over_map" style="display:none">Estás muy lejos para ver los puntos</div>
 				</div>
 			</div>
-			<div data-role="footer" id="line_selector" style="display:none">
+			<div data-role="footer" id="line_selector" style="display:none" data-position="fixed">
 				<a href="app#popupLines" data-rel="popup" data-role="button" data-inline="true">Líneas</a>
+			</div>
+			<div data-role="footer" id="common_footer" style="display:none" data-position="fixed">
+				<h4>Footer content</h4>
 			</div>
 
 			<div data-role="popup" id="popupLines" data-theme="none">

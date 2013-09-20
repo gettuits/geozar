@@ -53,7 +53,7 @@ function addMarker(lat, lon, title, subtitle, cat, id) {
 			}
 			if(cat == "bus" || cat == "bizi"){
 				var onclick = "showDetail("+id+", '"+ cat +"')";
-				content += ' <a href="#detail" data-icon="info" onclick="'+onclick+'">Ver</a>';
+				content += ' <a href="#detail"  data-rel="dialog" data-icon="info" onclick="'+onclick+'">Ver</a>';
 			}
 			if(cat == "tram"){
 				content += ' <a href="#complaint-page" data-icon="info">Ver</a>';
@@ -91,8 +91,11 @@ function showMap(cat) {
 	removeMarkers();
 	if(cat == "bus"){
 		$('#line_selector').show();
+		$('#common_footer').hide();
+
 	}else{
 		$('#line_selector').hide();
+		$('#common_footer').show();
 	}
 
 	if(debug_mode) {
@@ -132,8 +135,6 @@ function showMap(cat) {
 			}
 			$('#bus_lines').listview('refresh');
 		}
-
-		alert('Todo cargado');
 
   	})
   	 .fail(function( jqxhr, textStatus, error ) {
