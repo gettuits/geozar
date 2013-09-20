@@ -91,7 +91,7 @@ function showMap(cat) {
 
 	if(debug_mode) {
 		if(jQuery.browser.mobile){
-			api_url = "pharmacies.json";
+			api_url = "data/pharmacies.json";
 		}else{
 			api_url = "/www/data/pharmacies.json";
 		}
@@ -99,10 +99,10 @@ function showMap(cat) {
 		api_url = 'http://api.dndzgz.com/services/'+ cat +'?callback=?';
 	}
 	console.log(api_url);
-	alert(api_url);
 
 	var jqxhr = $.getJSON( api_url, function(data) {
-  		//console.log(data);
+  		console.log(data.locations.length);
+  		alert(data.locations.length);
 	})
   	.done(function(data) {
   		map.setZoom(15);

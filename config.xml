@@ -21,8 +21,7 @@
     
 
     <preference name="orientation" value="default" />
-    <preference name="fullscreen" value="true" />
-    <preference name="stay-in-webview" value="true" />
+    <preference name="fullscreen" value="false" />
 
     <access origin="*" /> 
 
