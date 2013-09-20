@@ -1,0 +1,354 @@
+{
+  "locations": [
+    {
+      "lat": -0.870748648419018,
+      "lon": 41.6872200936871,
+      "title": "AVENIDA DE LA ACADEMIA",
+      "subtitle": "",
+      "id": "tram-0"
+    },
+    {
+      "lat": -0.878640162660551,
+      "lon": 41.68682760391211,
+      "title": "PARQUE GOYA",
+      "subtitle": "",
+      "id": "tram-1"
+    },
+    {
+      "lat": -0.884563649846895,
+      "lon": 41.686888563299,
+      "title": "JUSLIBOL",
+      "subtitle": "",
+      "id": "tram-2"
+    },
+    {
+      "lat": -0.889693987071481,
+      "lon": 41.68347196964815,
+      "title": "CAMPUS RÍO EBRO",
+      "subtitle": "",
+      "id": "tram-3"
+    },
+    {
+      "lat": -0.89064416982682,
+      "lon": 41.67758718039639,
+      "title": "MARGARITA XIRGU",
+      "subtitle": "",
+      "id": "tram-4"
+    },
+    {
+      "lat": -0.890693042915636,
+      "lon": 41.674876345448936,
+      "title": "LEGAZ LACAMBRA",
+      "subtitle": "",
+      "id": "tram-5"
+    },
+    {
+      "lat": -0.890542476426949,
+      "lon": 41.66985936347742,
+      "title": "CLARA CAMPOAMOR",
+      "subtitle": "",
+      "id": "tram-6"
+    },
+    {
+      "lat": -0.887217976360337,
+      "lon": 41.66650166210031,
+      "title": "ROSALÍA DE CASTRO",
+      "subtitle": "",
+      "id": "tram-7"
+    },
+    {
+      "lat": -0.884535887877365,
+      "lon": 41.66250056979407,
+      "title": "MARTÍNEZ SORIA",
+      "subtitle": "",
+      "id": "tram-8"
+    },
+    {
+      "lat": -0.882784360594193,
+      "lon": 41.66115346071165,
+      "title": "LA CHIMENEA",
+      "subtitle": "",
+      "id": "tram-9"
+    },
+    {
+      "lat": -0.882096329011885,
+      "lon": 41.657272169413766,
+      "title": "PLAZA DEL PILAR - MURALLAS",
+      "subtitle": "",
+      "id": "tram-10"
+    },
+    {
+      "lat": -0.883925279854908,
+      "lon": 41.65516351618797,
+      "title": "CÉSAR AUGUSTO",
+      "subtitle": "",
+      "id": "tram-11"
+    },
+    {
+      "lat": -0.881581545050638,
+      "lon": 41.651431749942375,
+      "title": "PLAZA ESPAÑA",
+      "subtitle": "",
+      "id": "tram-12"
+    },
+    {
+      "lat": -0.885218430749725,
+      "lon": 41.647985887660326,
+      "title": "PLAZA ARAGÓN",
+      "subtitle": "",
+      "id": "tram-13"
+    },
+    {
+      "lat": -0.887115352974812,
+      "lon": 41.64653616898911,
+      "title": "GRAN VÍA",
+      "subtitle": "",
+      "id": "tram-14"
+    },
+    {
+      "lat": -0.892229260144248,
+      "lon": 41.64388250775695,
+      "title": "FERNANDO EL CATÓLICO / GOYA",
+      "subtitle": "",
+      "id": "tram-15"
+    },
+    {
+      "lat": -0.895011495269364,
+      "lon": 41.64088897945819,
+      "title": "PLAZA SAN FRANCISCO",
+      "subtitle": "",
+      "id": "tram-16"
+    },
+    {
+      "lat": -0.89764119474017,
+      "lon": 41.638026245776125,
+      "title": "EMPERADOR CARLOS V",
+      "subtitle": "",
+      "id": "tram-17"
+    },
+    {
+      "lat": -0.900619782960667,
+      "lon": 41.63569417996596,
+      "title": "ROMAREDA",
+      "subtitle": "",
+      "id": "tram-18"
+    },
+    {
+      "lat": -0.905558740501542,
+      "lon": 41.631365479199275,
+      "title": "CASABLANCA",
+      "subtitle": "",
+      "id": "tram-19"
+    },
+    {
+      "lat": -0.909577626295151,
+      "lon": 41.6264024318186,
+      "title": "ARGUALAS",
+      "subtitle": "",
+      "id": "tram-20"
+    },
+    {
+      "lat": -0.91879041725687,
+      "lon": 41.62259781200447,
+      "title": "PASEO DE LOS OLVIDADOS",
+      "subtitle": "",
+      "id": "tram-21"
+    },
+    {
+      "lat": -0.923562781244775,
+      "lon": 41.62132993588425,
+      "title": "LOS PÁJAROS",
+      "subtitle": "",
+      "id": "tram-22"
+    },
+    {
+      "lat": -0.930098900570343,
+      "lon": 41.62362580836514,
+      "title": "CANTANDO BAJO LA LLUVIA",
+      "subtitle": "",
+      "id": "tram-23"
+    },
+    {
+      "lat": -0.936256470037504,
+      "lon": 41.625046466954984,
+      "title": "MAGO DE OZ",
+      "subtitle": "",
+      "id": "tram-24"
+    },
+    {
+      "lat": -0.936391620931296,
+      "lon": 41.624302796932,
+      "title": "MAGO DE OZ",
+      "subtitle": "",
+      "id": "tram-25"
+    },
+    {
+      "lat": -0.930456290354911,
+      "lon": 41.62295621905444,
+      "title": "UN AMERICANO EN PARÍS",
+      "subtitle": "",
+      "id": "tram-26"
+    },
+    {
+      "lat": -0.924086129272482,
+      "lon": 41.62083268712451,
+      "title": "LA VENTANA INDISCRETA",
+      "subtitle": "",
+      "id": "tram-27"
+    },
+    {
+      "lat": -0.918605696349487,
+      "lon": 41.62245549624149,
+      "title": "PASEO DE LOS OLVIDADOS",
+      "subtitle": "",
+      "id": "tram-28"
+    },
+    {
+      "lat": -0.90947187681504,
+      "lon": 41.62635961855901,
+      "title": "ARGUALAS",
+      "subtitle": "",
+      "id": "tram-29"
+    },
+    {
+      "lat": -0.905485049467633,
+      "lon": 41.63133306366483,
+      "title": "CASABLANCA",
+      "subtitle": "",
+      "id": "tram-30"
+    },
+    {
+      "lat": -0.900518119651441,
+      "lon": 41.63561693844191,
+      "title": "ROMAREDA",
+      "subtitle": "",
+      "id": "tram-31"
+    },
+    {
+      "lat": -0.89753216955157,
+      "lon": 41.637970122131264,
+      "title": "EMPERADOR CARLOS V",
+      "subtitle": "",
+      "id": "tram-32"
+    },
+    {
+      "lat": -0.894874375589163,
+      "lon": 41.640818018357955,
+      "title": "PLAZA SAN FRANCISCO",
+      "subtitle": "",
+      "id": "tram-33"
+    },
+    {
+      "lat": -0.892076049901901,
+      "lon": 41.64380449332461,
+      "title": "FERNANDO EL CATÓLICO / GOYA",
+      "subtitle": "",
+      "id": "tram-34"
+    },
+    {
+      "lat": -0.88703381833796,
+      "lon": 41.64641911715844,
+      "title": "GRAN VÍA",
+      "subtitle": "",
+      "id": "tram-35"
+    },
+    {
+      "lat": -0.885064570443639,
+      "lon": 41.64789578334334,
+      "title": "PLAZA ARAGÓN",
+      "subtitle": "",
+      "id": "tram-36"
+    },
+    {
+      "lat": -0.881422694675326,
+      "lon": 41.651339927611616,
+      "title": "PLAZA ESPAÑA",
+      "subtitle": "",
+      "id": "tram-37"
+    },
+    {
+      "lat": -0.883870508280312,
+      "lon": 41.65515503206288,
+      "title": "CÉSAR AUGUSTO",
+      "subtitle": "",
+      "id": "tram-38"
+    },
+    {
+      "lat": -0.882019851814277,
+      "lon": 41.657239597427704,
+      "title": "PLAZA DEL PILAR - MURALLAS",
+      "subtitle": "",
+      "id": "tram-39"
+    },
+    {
+      "lat": -0.88277857554743,
+      "lon": 41.66122810721734,
+      "title": "LA CHIMENEA",
+      "subtitle": "",
+      "id": "tram-40"
+    },
+    {
+      "lat": -0.88358004816347,
+      "lon": 41.66310341630349,
+      "title": "MARÍA MONTESSORI",
+      "subtitle": "",
+      "id": "tram-41"
+    },
+    {
+      "lat": -0.886655301363121,
+      "lon": 41.667338724592405,
+      "title": "LEÓN FELIPE",
+      "subtitle": "",
+      "id": "tram-42"
+    },
+    {
+      "lat": -0.888825817827053,
+      "lon": 41.669612667321886,
+      "title": "PABLO NERUDA",
+      "subtitle": "",
+      "id": "tram-43"
+    },
+    {
+      "lat": -0.889272453881328,
+      "lon": 41.674865024176356,
+      "title": "ADOLFO AZNAR",
+      "subtitle": "",
+      "id": "tram-44"
+    },
+    {
+      "lat": -0.889247328951419,
+      "lon": 41.67745723020413,
+      "title": "GARCÍA ABRIL",
+      "subtitle": "",
+      "id": "tram-45"
+    },
+    {
+      "lat": -0.889649058650386,
+      "lon": 41.68347438659936,
+      "title": "CAMPUS RÍO EBRO",
+      "subtitle": "",
+      "id": "tram-46"
+    },
+    {
+      "lat": -0.884560996250137,
+      "lon": 41.68684195152137,
+      "title": "JUSLIBOL",
+      "subtitle": "",
+      "id": "tram-47"
+    },
+    {
+      "lat": -0.878644922013433,
+      "lon": 41.68676870012982,
+      "title": "PARQUE GOYA",
+      "subtitle": "",
+      "id": "tram-48"
+    },
+    {
+      "lat": -0.870705241429739,
+      "lon": 41.687221090387034,
+      "title": "AVENIDA DE LA ACADEMIA",
+      "subtitle": "",
+      "id": "tram-49"
+    }
+  ]
+}
