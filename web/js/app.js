@@ -208,6 +208,7 @@ function geolocalize(first){
 	}
 }
 function initMap() {
+
 	var zoom = 16;
 	
 	var myOptions = {
@@ -245,4 +246,30 @@ function initMap() {
 }
 
 
+//
+function sniffDevice(){
+	console.log(jQuery.browser);
+	var deviceInfo = ''+
+	'chrome: ' + jQuery.browser.chrome + ' - ' +
+	'version: ' + jQuery.browser.version + ' - ' +
+	'webkit: ' + jQuery.browser.webkit + ' - ' +
+	'mobile: ' + jQuery.browser.mobile;
+
+	alert(deviceInfo);
+
+	var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
+	console.log(isAndroid);
+	alert('Dispositivo android? '+isAndroid);
+	if(jQuery.browser.mobile){
+	   alert('You are using a mobile device!');
+	}
+	else{
+	   alert('You are not using a mobile device!');
+	}
+}
+
+//
+sniffDevice();
+
+// Main
 initMap();
