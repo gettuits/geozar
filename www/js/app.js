@@ -91,7 +91,7 @@ function showMap(cat) {
 
 	if(debug_mode) {
 		if(jQuery.browser.mobile){
-			api_url = "debug/pharmacies.json";
+			api_url = "/www/data/pharmacies.json";
 		}else{
 			api_url = "/www/data/pharmacies.json";
 		}
@@ -280,8 +280,6 @@ function sniffDevice(){
 
 //
 //sniffDevice();
-var loc = window.location.pathname;
-alert(loc);
 
 // Main
 initMap();
