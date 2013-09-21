@@ -1,6 +1,6 @@
 #map-container{height:320px;width:100%}
 @media screen and (min-height: 500px) {
-	#map-container{height:450px;}
+	#map-container{height:500px;}
 }
 @media screen and (min-height: 600px) {
 	#map-container{height:520px;}
@@ -20,6 +20,7 @@
 @media screen and (min-height: 1100px) {
 	#map-container{height:950px;}
 }
+
 
 #popupLines{height:300px; overflow:scroll}
 #wrapper { position: relative; }
